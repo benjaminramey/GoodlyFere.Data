@@ -13,5 +13,9 @@
     <releaseNotes>Initial classes and interfaces.</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>data-access-layer repository datacontext</tags>
+      <dependencies>
+          <dependency id="GoodlyFere.Criteria"
+                      version="[1.0,2.0)" />
+      </dependencies>
   </metadata>
 </package>
