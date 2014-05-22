@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>GoodlyFere.Data</id>
+    <version>$version$</version>
+    <title>GoodlyFere.Data</title>
+    <authors>Ben Ramey</authors>
+    <owners>Ben Ramey</owners>
+    <licenseUrl>https://github.com/benjaminramey/GoodlyFere.Data/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/benjaminramey/GoodlyFere.Data</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Base data classes to build data access layers with.</description>
+    <releaseNotes>Initial classes and interfaces.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>data-access-layer repository datacontext</tags>
+  </metadata>
+</package>
