@@ -30,23 +30,34 @@
 #region Usings
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using GoodlyFere.Criteria;
 
 #endregion
 
 namespace GoodlyFere.Data
 {
-    public interface IDataContext : IReadOnlyDataContext
+    public interface IReadOnlyDataContext : IDisposable
     {
         #region Public Methods
 
-        void Create<T>(T newObject);
+        IList<T> Find<T>(ICriteria<T> criteria);
 
-        void Delete<T>(T objectToDelete);
+        T FindById<T>(object id);
 
-        void Update<T>(T newObject);
+        T FindOne<T>(ICriteria<T> criteria);
 
-        void SaveChanges();
+        T FindOne<T, TSortKey>(ICriteria<T> criteria, Expression<Func<T, TSortKey>> ordering, bool desc = false);
+
+        IList<T> GetAll<T>();
+
+        T GetOne<T>();
+
+        void LoadChildren<T>(T obj, string propertyName);
+
+        void LoadParent<T>(T obj, string propertyName);
 
         #endregion
     }

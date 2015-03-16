@@ -4,7 +4,7 @@ properties {
 	$package_dlls = @{
 		"net40" = "$solution_name\bin\Release\$solution_name.dll"
 	}
-	$version = "1.0.0"
+	$version = "1.0.1"
 	$git_tags = git describe --tags --long
 	if ($git_tags)
 	{

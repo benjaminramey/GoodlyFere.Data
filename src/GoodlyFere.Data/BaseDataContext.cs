@@ -41,6 +41,12 @@ namespace GoodlyFere.Data
 {
     public abstract class BaseDataContext : IDataContext
     {
+        #region Methods
+
+        protected abstract IRepository<T> GetRepository<T>();
+
+        #endregion
+
         #region Public Methods
 
         public virtual void Create<T>(T newObject)
@@ -133,11 +139,7 @@ namespace GoodlyFere.Data
             }
         }
 
-        #endregion
-
-        #region Methods
-
-        protected abstract IRepository<T> GetRepository<T>();
+        public abstract void SaveChanges();
 
         #endregion
     }
