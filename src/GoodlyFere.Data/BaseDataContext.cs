@@ -31,6 +31,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 using GoodlyFere.Criteria;
@@ -138,6 +140,8 @@ namespace GoodlyFere.Data
                 repo.Update(newObject);
             }
         }
+
+        public abstract DbTransaction BeginTransaction(IsolationLevel isolationLevel);
 
         public abstract void SaveChanges();
 

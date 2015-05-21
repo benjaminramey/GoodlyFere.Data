@@ -31,6 +31,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 using GoodlyFere.Criteria;
@@ -58,6 +60,8 @@ namespace GoodlyFere.Data
         void LoadChildren<T>(T obj, string propertyName);
 
         void LoadParent<T>(T obj, string propertyName);
+
+        DbTransaction BeginTransaction(IsolationLevel isolationLevel);
 
         #endregion
     }
