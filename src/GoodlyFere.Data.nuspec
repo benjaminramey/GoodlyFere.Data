@@ -10,7 +10,7 @@
         <projectUrl>https://github.com/benjaminramey/GoodlyFere.Data</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Base data classes to build data access layers with.</description>
-        <releaseNotes>Add read-only interface and add SaveChanges method to IDataContext.</releaseNotes>
+        <releaseNotes>Add BeginTransaction method to IReadOnlyDataContext.</releaseNotes>
         <copyright>Copyright 2014</copyright>
         <tags>data-access-layer repository datacontext</tags>
         <dependencies>
