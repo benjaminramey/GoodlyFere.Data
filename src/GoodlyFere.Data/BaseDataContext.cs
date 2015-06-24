@@ -51,94 +51,72 @@ namespace GoodlyFere.Data
 
         #region Public Methods
 
-        public virtual void Create<T>(T newObject)
+        public virtual T Create<T>(T newObject)
         {
-            using (var repo = GetRepository<T>())
-            {
-                repo.Add(newObject);
-            }
+            var repo = GetRepository<T>();
+            return repo.Create(newObject);
         }
 
-        public void Delete<T>(T objectToDelete)
+        public virtual T Delete<T>(T objectToDelete)
         {
-            using (var repo = GetRepository<T>())
-            {
-                repo.Remove(objectToDelete);
-            }
+            var repo = GetRepository<T>();
+            return repo.Delete(objectToDelete);
         }
 
         public abstract void Dispose();
 
         public virtual IList<T> Find<T>(ICriteria<T> criteria)
         {
-            using (var repo = GetRepository<T>())
-            {
-                return repo.Find(criteria);
-            }
+            var repo = GetRepository<T>();
+            return repo.Find(criteria);
         }
 
-        public T FindById<T>(object id)
+        public virtual T FindById<T>(object id)
         {
-            using (var repo = GetRepository<T>())
-            {
-                return repo.FindById(id);
-            }
+            var repo = GetRepository<T>();
+            return repo.FindById(id);
         }
 
         public virtual T FindOne<T>(ICriteria<T> criteria)
         {
-            using (var repo = GetRepository<T>())
-            {
-                return repo.FindOne(criteria);
-            }
+            var repo = GetRepository<T>();
+            return repo.FindOne(criteria);
         }
 
-        public T FindOne<T, TSortKey>(ICriteria<T> criteria, Expression<Func<T, TSortKey>> ordering, bool desc = false)
+        public virtual T FindOne<T, TSortKey>(ICriteria<T> criteria, Expression<Func<T, TSortKey>> ordering, bool desc = false)
         {
-            using (var repo = GetRepository<T>())
-            {
-                return repo.FindOne(criteria, ordering, desc);
-            }
+            var repo = GetRepository<T>();
+            return repo.FindOne(criteria, ordering, desc);
         }
 
         public virtual IList<T> GetAll<T>()
         {
-            using (var repo = GetRepository<T>())
-            {
-                return repo.GetAll();
-            }
+            var repo = GetRepository<T>();
+            return repo.GetAll();
         }
 
         public virtual T GetOne<T>()
         {
-            using (var repo = GetRepository<T>())
-            {
-                return repo.FindOne();
-            }
+            var repo = GetRepository<T>();
+            return repo.FindOne();
         }
 
-        public void LoadChildren<T>(T obj, string propertyName)
+        public virtual void LoadChildren<T>(T obj, string propertyName)
         {
-            using (var repo = GetRepository<T>())
-            {
-                repo.LoadChildren(obj, propertyName);
-            }
+            var repo = GetRepository<T>();
+            repo.LoadChildren(obj, propertyName);
         }
 
-        public void LoadParent<T>(T obj, string propertyName)
+        public virtual void LoadParent<T>(T obj, string propertyName)
         {
-            using (var repo = GetRepository<T>())
-            {
-                repo.LoadParent(obj, propertyName);
-            }
+            var repo = GetRepository<T>();
+            repo.LoadParent(obj, propertyName);
         }
 
-        public virtual void Update<T>(T newObject)
+        public virtual T Update<T>(T newObject)
         {
-            using (var repo = GetRepository<T>())
-            {
-                repo.Update(newObject);
-            }
+            var repo = GetRepository<T>();
+            return repo.Update(newObject);
         }
 
         public abstract DbTransaction BeginTransaction(IsolationLevel isolationLevel);

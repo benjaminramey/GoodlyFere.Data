@@ -43,7 +43,7 @@ namespace GoodlyFere.Data
     {
         #region Public Methods
 
-        void Add(T newObject);
+        T Create(T newObject);
 
         IList<T> Find(ICriteria<T> criteria);
 
@@ -61,9 +61,9 @@ namespace GoodlyFere.Data
 
         void LoadParent(T obj, string propertyName);
 
-        void Remove(T objectToDelete);
+        T Delete(T objectToDelete);
 
-        void Update(T objectToUpdate);
+        T Update(T objectToUpdate);
 
         #endregion
     }

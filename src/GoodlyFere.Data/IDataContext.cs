@@ -40,11 +40,11 @@ namespace GoodlyFere.Data
     {
         #region Public Methods
 
-        void Create<T>(T newObject);
+        T Create<T>(T newObject);
 
-        void Delete<T>(T objectToDelete);
+        T Delete<T>(T objectToDelete);
 
-        void Update<T>(T newObject);
+        T Update<T>(T newObject);
 
         void SaveChanges();
 
