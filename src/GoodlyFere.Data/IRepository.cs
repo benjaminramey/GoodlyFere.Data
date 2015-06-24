@@ -39,6 +39,10 @@ using GoodlyFere.Criteria;
 
 namespace GoodlyFere.Data
 {
+    /// <summary>
+    ///     A repository should manage the collection of objects retrieved, added,
+    ///     removed and updated in a data store.
+    /// </summary>
     public interface IRepository<T> : IDisposable
     {
         #region Public Methods

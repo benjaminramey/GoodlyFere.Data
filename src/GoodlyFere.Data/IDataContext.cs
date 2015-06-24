@@ -36,6 +36,11 @@ using System.Linq;
 
 namespace GoodlyFere.Data
 {
+    /// <summary>
+    ///     The creation of the IDataContext represents the beginning of a business
+    ///     transaction.  It's disposal should mark the completion of a business
+    ///     transaction.
+    /// </summary>
     public interface IDataContext : IReadOnlyDataContext
     {
         #region Public Methods

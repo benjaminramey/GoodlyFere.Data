@@ -83,7 +83,10 @@ namespace GoodlyFere.Data
             return repo.FindOne(criteria);
         }
 
-        public virtual T FindOne<T, TSortKey>(ICriteria<T> criteria, Expression<Func<T, TSortKey>> ordering, bool desc = false)
+        public virtual T FindOne<T, TSortKey>(
+            ICriteria<T> criteria,
+            Expression<Func<T, TSortKey>> ordering,
+            bool desc = false)
         {
             var repo = GetRepository<T>();
             return repo.FindOne(criteria, ordering, desc);
