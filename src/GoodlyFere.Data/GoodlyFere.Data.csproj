@@ -34,8 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GoodlyFere.Criteria">
-      <HintPath>..\packages\GoodlyFere.Criteria.1.1.0.0\lib\net35\GoodlyFere.Criteria.dll</HintPath>
+    <Reference Include="GoodlyFere.Criteria, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\GoodlyFere.Criteria.1.2.0.0\lib\net35\GoodlyFere.Criteria.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

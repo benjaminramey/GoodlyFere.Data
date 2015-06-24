@@ -10,12 +10,12 @@
         <projectUrl>https://github.com/benjaminramey/GoodlyFere.Data</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Base data classes to build data access layers with.</description>
-        <releaseNotes>Add BeginTransaction method to IReadOnlyDataContext.</releaseNotes>
+        <releaseNotes>Return objects from Add, Update, Remove methods, remove IDisposable on IRepository, remove usings around IRepositories in DataContext.</releaseNotes>
         <copyright>Copyright 2014</copyright>
         <tags>data-access-layer repository datacontext</tags>
         <dependencies>
             <dependency id="GoodlyFere.Criteria"
-                        version="1.1.0" />
+                        version="1.2.0" />
         </dependencies>
     </metadata>
 </package>
