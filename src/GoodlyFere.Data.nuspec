@@ -2,7 +2,7 @@
 <package >
     <metadata>
         <id>GoodlyFere.Data</id>
-        <version>$version$</version>
+        <version>$NuGetVersionV2$</version>
         <title>GoodlyFere.Data</title>
         <authors>Ben Ramey</authors>
         <owners>Ben Ramey</owners>
