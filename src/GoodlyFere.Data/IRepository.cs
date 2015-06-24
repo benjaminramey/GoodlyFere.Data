@@ -43,11 +43,11 @@ namespace GoodlyFere.Data
     ///     A repository should manage the collection of objects retrieved, added,
     ///     removed and updated in a data store.
     /// </summary>
-    public interface IRepository<T> : IDisposable
+    public interface IRepository<T>
     {
         #region Public Methods
 
-        T Create(T newObject);
+        T Add(T newObject);
 
         IList<T> Find(ICriteria<T> criteria);
 
@@ -65,7 +65,7 @@ namespace GoodlyFere.Data
 
         void LoadParent(T obj, string propertyName);
 
-        T Delete(T objectToDelete);
+        T Remove(T objectToDelete);
 
         T Update(T objectToUpdate);
 

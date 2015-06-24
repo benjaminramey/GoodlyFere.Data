@@ -54,13 +54,13 @@ namespace GoodlyFere.Data
         public virtual T Create<T>(T newObject)
         {
             var repo = GetRepository<T>();
-            return repo.Create(newObject);
+            return repo.Add(newObject);
         }
 
         public virtual T Delete<T>(T objectToDelete)
         {
             var repo = GetRepository<T>();
-            return repo.Delete(objectToDelete);
+            return repo.Remove(objectToDelete);
         }
 
         public abstract void Dispose();

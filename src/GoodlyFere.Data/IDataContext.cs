@@ -40,6 +40,9 @@ namespace GoodlyFere.Data
     ///     The creation of the IDataContext represents the beginning of a business
     ///     transaction.  It's disposal should mark the completion of a business
     ///     transaction.
+    /// 
+    ///     The DataContext should manage the creation and retention of 
+    ///     repositories during the business transaction.
     /// </summary>
     public interface IDataContext : IReadOnlyDataContext
     {
